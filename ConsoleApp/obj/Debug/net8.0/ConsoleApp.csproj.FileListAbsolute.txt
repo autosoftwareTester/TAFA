@@ -1,0 +1,17 @@
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ConsoleApp.csproj.AssemblyReference.cache
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ConsoleApp.AssemblyInfoInputs.cache
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ConsoleApp.AssemblyInfo.cs
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\bin\Debug\net8.0\ConsoleApp.exe
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\bin\Debug\net8.0\ConsoleApp.deps.json
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\bin\Debug\net8.0\ConsoleApp.runtimeconfig.json
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\bin\Debug\net8.0\ConsoleApp.dll
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\bin\Debug\net8.0\ConsoleApp.pdb
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\bin\Debug\net8.0\nunit.framework.dll
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ConsoleApp.csproj.Up2Date
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ConsoleApp.dll
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\refint\ConsoleApp.dll
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ConsoleApp.pdb
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ConsoleApp.genruntimeconfig.cache
+C:\Users\autot\RiderProjects\FTDTestProject2\ConsoleApp\obj\Debug\net8.0\ref\ConsoleApp.dll

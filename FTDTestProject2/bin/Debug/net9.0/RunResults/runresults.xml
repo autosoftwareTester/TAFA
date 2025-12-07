@@ -1,0 +1,108 @@
+<Results>
+  <GeneralInfo>
+    <RunStartTime>2025-12-06 11:10:12</RunStartTime>
+    <Timezone>GMT+0200 (South Africa Standard Time)</Timezone>
+    <OrchestrationToolName>ReSharperTestRunner</OrchestrationToolName>
+    <ReportTitle>OpenText Functional Testing for Developers Report</ReportTitle>
+  </GeneralInfo>
+  <ReportNode type="Run">
+    <Data>
+      <StartTime>2025-12-06 11:10:12</StartTime>
+      <Duration>2</Duration>
+      <Result>Passed</Result>
+      <ErrorText></ErrorText>
+      <Links></Links>
+      <Extension>
+        <Any>
+          <IconKey>Run</IconKey>
+          <IsHtmlErrorText>true</IsHtmlErrorText>
+        </Any>
+      </Extension>
+      <Name>Run Results</Name>
+      <Environment>
+        <OSInfo><![CDATA[Windows_NT 10.0.26200]]></OSInfo>
+        <HostName>Igwe</HostName>
+        <NumberOfCores>12</NumberOfCores>
+        <TotalMemory>15636</TotalMemory>
+        <Locale><![CDATA[en-US]]></Locale>
+        <Timezone><![CDATA[GMT+0200 (South Africa Standard Time)]]></Timezone>
+        <User><![CDATA[igwe\autot]]></User>
+      </Environment>
+      <TestedApplication />
+      <ToolName>OpenText Functional Testing for Developers</ToolName>
+      <ToolVersion><![CDATA[25.2]]></ToolVersion>
+      <Description> </Description>
+    </Data>
+    <ReportNode type="Assembly">
+      <Data>
+        <Name>FTDTestProject2</Name>
+        <Description><![CDATA[Version: 1.0.0.0]]></Description>
+        <StartTime>12/6/2025 11:10:13 AM</StartTime>
+        <Duration>1</Duration>
+        <Result>Passed</Result>
+        <Video></Video>
+        <ErrorText></ErrorText>
+        <Links></Links>
+        <Extension>
+          <Any>
+            <IconKey>Assembly</IconKey>
+            <IsHtmlErrorText>true</IsHtmlErrorText>
+          </Any>
+        </Extension>
+      </Data>
+      <ReportNode type="Namespace">
+        <Data>
+          <Name>FTDTestProject2</Name>
+          <Description><![CDATA[]]></Description>
+          <StartTime>12/6/2025 11:10:13 AM</StartTime>
+          <Duration>1</Duration>
+          <Result>Passed</Result>
+          <Video></Video>
+          <ErrorText></ErrorText>
+          <Links></Links>
+          <Extension>
+            <Any>
+              <IconKey>Namespace</IconKey>
+              <IsHtmlErrorText>true</IsHtmlErrorText>
+            </Any>
+          </Extension>
+        </Data>
+        <ReportNode type="Class">
+          <Data>
+            <Name>FTDTest</Name>
+            <Description><![CDATA[]]></Description>
+            <StartTime>12/6/2025 11:10:13 AM</StartTime>
+            <Duration>1</Duration>
+            <Result>Passed</Result>
+            <Video></Video>
+            <ErrorText></ErrorText>
+            <Links></Links>
+            <Extension>
+              <Any>
+                <IconKey>Class</IconKey>
+                <IsHtmlErrorText>true</IsHtmlErrorText>
+              </Any>
+            </Extension>
+          </Data>
+          <ReportNode type="Test">
+            <Data>
+              <Name>Test</Name>
+              <Description><![CDATA[]]></Description>
+              <StartTime>2025-12-06 11:10:13</StartTime>
+              <Duration>1</Duration>
+              <Result>Passed</Result>
+              <ErrorText></ErrorText>
+              <Links></Links>
+              <Extension>
+                <Any>
+                  <IconKey>Test</IconKey>
+                  <IsHtmlErrorText>true</IsHtmlErrorText>
+                </Any>
+              </Extension>
+            </Data>
+          </ReportNode>
+        </ReportNode>
+      </ReportNode>
+    </ReportNode>
+  </ReportNode>
+</Results>
