@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FTDTestProject2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f493f4cd2a2e6466e75f70e22243b4971ce78855")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f26c7491c1d933a9e131e8ceaa1d0c3ed93be5d")]
 [assembly: System.Reflection.AssemblyProductAttribute("FTDTestProject2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FTDTestProject2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
