@@ -11,4 +11,8 @@
       <PackageReference Include="NUnit" Version="3.13.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Include=".github\workflows\sonar.yml" />
+    </ItemGroup>
+
 </Project>

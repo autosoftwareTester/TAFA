@@ -1,0 +1,85 @@
+﻿name: SonarQube Analysis (C#)
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    # Analyze all pull requests targeting the main branch
+    branches:
+      - main
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+  # Allows manual running of the workflow
+
+jobs:
+  build:
+    runs-on: windows-latest # Windows is often preferred for C# builds, but can use ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          # Fetch depth must be set to 0 to be able to detect changed files in PRs
+          fetch-depth: 0
+
+      - name: Set up .NET SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x' # Specify your required .NET version (e.g., 6.x, 7.x, 8.x)
+
+      - name: Install SonarScanner for .NET
+        shell: bash
+        run: |
+          dotnet tool install --global dotnet-sonarscanner
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+      
+      # --- 1. BEGIN ANALYSIS (Prepare) ---
+      - name: SonarScanner Begin
+        shell: bash
+        run: |
+          dotnet sonarscanner begin \
+            /k:"${{ secrets.SONAR_PROJECT_KEY }}" \
+            /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}" \
+            /d:sonar.token="${{ secrets.SONAR_TOKEN }}" \
+            /d:sonar.scm.disabled=true \
+            /d:sonar.scm.provider=git \
+            /d:sonar.coverage.exclusions="**/*Test*.cs" \
+            /d:sonar.cs.opencover.reportsPaths="**/coverage.opencover.xml" \
+            /d:sonar.cs.vscoveragexml.reportsPaths="**/*.coveragexml" \
+            /o:"${{ secrets.SONAR_PROJECT_KEY }}"
+        env:
+          # Sonar Token is necessary for the begin step to communicate with the server
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      
+      # --- 2. BUILD THE SOLUTION ---
+      - name: Build the C# Solution
+        shell: bash
+        run: dotnet build --configuration Release --no-incremental
+      
+      # --- 3. RUN TESTS AND GENERATE COVERAGE REPORT ---
+      # This step is critical for collecting code coverage data which SonarQube uses.
+      - name: Run Tests with Coverage (OpenCover format)
+        shell: bash
+        run: |
+          dotnet test --configuration Release \
+            /p:CollectCoverage=true \
+            /p:CoverletOutputFormat=opencover \
+            /p:CoverletOutput=./TestResults/ \
+            --logger trx
+      
+      # --- 4. END ANALYSIS (Upload Results) ---
+      - name: SonarScanner End
+        shell: bash
+        run: dotnet sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
+        env:
+          # The token is required to upload the final analysis results
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      
+      # --- 5. (Optional) Publish Test Results to GitHub Actions ---
+      - name: Publish Test Results (TRX)
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: '**/*.trx'
+          retention-days: 5
